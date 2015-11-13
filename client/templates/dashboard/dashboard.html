@@ -1,0 +1,21 @@
+<template name="dashboard">
+  <div class="template-dashboard">
+    <a class="btn-floating btn-large waves-effect waves-light red lighten-2 right" href="{{pathFor 'items.new'}}"><i class="mdi mdi-plus"></i></a>
+
+    <h1>Dashboard</h1>
+
+    <ul class="collection">
+      {{#each items}}
+        <li class="collection-item avatar">
+          <i class="mdi mdi-check circle red lighten-2"></i>
+          <span class="title">{{ name }}</span>
+          <p class="truncate">
+            {{ description }}
+          </p>
+          <span class="secondary-content"><i class="mdi mdi-star"></i> {{ rating }}</span>
+        </li>
+      {{/each}}
+    </ul>
+
+  </div>
+</template>
