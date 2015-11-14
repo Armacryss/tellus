@@ -1,3 +1,8 @@
 {
-    "welcome": "Bienvenue sur Tellus"
+    "welcome": "Bienvenue sur Tellus",
+    "sign_in": "Se connecter",
+    "register": "S'enregistrer",
+    "sign_out": "Déconnexion",
+    "home": "Accueil",
+    "dashboard": "Tableau de bord"
 }

@@ -38,3 +38,7 @@ ul.side-nav li a {
 ul.side-nav li {
   float: none;
 }
+
+.dropdown-content {
+  width: 200px;
+}

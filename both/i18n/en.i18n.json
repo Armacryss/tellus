@@ -1,3 +1,8 @@
 {
-    "welcome": "Welcome to Tellus"
+    "welcome": "Welcome to Tellus",
+    "sign_in": "Sign In",
+    "register": "Register",
+    "sign_out": "Sign Out",
+    "home": "Home",
+    "dashboard": "Dashboard"
 }
