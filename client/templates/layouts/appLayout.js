@@ -9,10 +9,12 @@ Meteor.startup(function() {
   $('body').on('click', '[data-action=switch_fr]', function(event) {
     event.preventDefault();
     TAPi18n.setLanguage('fr');
+    T9n.setLanguage('fr');
   });
     
   $('body').on('click', '[data-action=switch_en]', function(event) {
     event.preventDefault();
     TAPi18n.setLanguage('en');
+    T9n.setLanguage('en');
   });
 });

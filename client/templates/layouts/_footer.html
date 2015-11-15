@@ -2,24 +2,15 @@
   <footer class="page-footer">
     <div class="container">
       <div class="row">
-        <div class="col l4 s12">
-          <h3 class="white-text">Footer Title</h3>
-          <p class="grey-text text-lighten-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio.
-          </p>
-        </div>
-        <div class="col l4 s12">
-          <h3 class="white-text">Footer Title</h3>
-          <p class="grey-text text-lighten-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio.
-          </p>
-        </div>
-        <div class="col l4 s12">
-          <h3 class="white-text">Footer Title</h3>
-          <p class="grey-text text-lighten-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio.
-          </p>
-        </div>
+        <nav>
+          <div class="right nav-wrapper">
+            <div class="col s12">
+              {{#each crumb in bread}}
+                <a href="{{pathFor crumb.path}}" class="breadcrumb">{{_ crumb.name}}</a>
+              {{/each}}
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
     <div class="footer-copyright">

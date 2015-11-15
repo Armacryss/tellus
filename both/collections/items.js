@@ -8,7 +8,7 @@ Items.before.insert(function (userId, doc) {
   doc.createdAt = moment().toDate();
 });
 
-Items.attachSchema(new SimpleSchema({
+ItemSchema = new SimpleSchema({
   name: {
     type: String,
     max: 200
@@ -32,4 +32,9 @@ Items.attachSchema(new SimpleSchema({
       max: 5
     }
   }
-}));
+});
+
+Meteor.startup(function() {
+  ItemSchema.i18n('schemas.item');
+  Items.attachSchema(ItemSchema);
+});

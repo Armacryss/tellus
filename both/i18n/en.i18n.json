@@ -4,5 +4,43 @@
     "register": "Register",
     "sign_out": "Sign Out",
     "home": "Home",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "useraccount": "User account",
+    "profile": "Profile",
+    "newitem": "New Item",
+    "send": "Send",
+    "schemas": {
+        "userprofile": {
+          "firstName": {
+            "label": "First name",
+            "placeholder": "Your first name"
+          },
+          "lastName": {
+            "label": "Last name",
+            "placeholder": "Your last name"
+          },
+          "gender": {
+            "label": "Gender",
+            "placeholder": "Select a gender",
+            "options": {
+              "Male": "Male",
+              "Female": "Female"
+            }
+          }
+        },
+        "item": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Enter item name"
+          },
+          "description": {
+            "label": "Description",
+            "placeholder": "Enter item description"
+          },
+          "rating": {
+            "label": "Rating",
+            "placeholder": "Select item rating"
+          }
+        }
+    }
 }

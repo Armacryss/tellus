@@ -3,7 +3,11 @@ DashboardController = AppController.extend({
     return this.subscribe('items');
   },
   data: {
-    items: Items.find({})
+    items: Items.find({}),
+    bread: [
+      {path: 'home', name: 'home'},
+      {path: 'dashboard', name: 'dashboard'}
+    ]
   },
   onAfterAction: function () {
     Meta.setTitle('Dashboard');

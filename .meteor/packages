@@ -5,7 +5,6 @@
 
 accounts-password
 alanning:roles
-zimme:iron-router-active
 cmather:handlebars-server@0.2.0
 dburles:collection-helpers
 reywood:publish-composite
@@ -17,8 +16,7 @@ anti:fake
 cunneen:mailgun
 iron:router
 yasinuslu:blaze-meta
-materialize:materialize
-aldeed:autoform
+aldeed:autoform@=5.7.1
 aldeed:collection2
 gildaspk:autoform-materialize
 standard-minifiers
@@ -36,6 +34,9 @@ ejson
 spacebars
 check
 useraccounts:iron-routing
-dapearce:material-icons
-armacryss:useraccounts-materialize
 tap:i18n
+zimme:active-route
+poetic:materialize-scss
+useraccounts:materialize
+gwendall:autoform-i18n
+gwendall:simple-schema-i18n

@@ -13,6 +13,12 @@ Router.route('/items/new', {
   controller: 'ItemsNewController'
 });
 
+Router.route('/profile', {
+  name: 'userprofile',
+  template: 'userprofile',
+  controller: 'ProfileController'
+});
+
 Router.plugin('ensureSignedIn', {
-  only: ['dashboard']
+  only: ['dashboard', 'user_profile']
 });

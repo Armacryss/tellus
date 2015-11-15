@@ -4,5 +4,43 @@
     "register": "S'enregistrer",
     "sign_out": "Déconnexion",
     "home": "Accueil",
-    "dashboard": "Tableau de bord"
+    "dashboard": "Tableau de bord",
+    "useraccount": "Compte utilisateur",
+    "profile": "Profil",
+    "newitem": "Nouvel élément",
+    "send": "Envoyer",
+    "schemas": {
+        "userprofile": {
+          "firstName": {
+            "label": "Prénom",
+            "placeholder": "Renseignez votre prénom"
+          },
+          "lastName": {
+            "label": "Nom",
+            "placeholder": "Renseignez votre nom"
+          },
+          "gender": {
+            "label": "Sexe",
+            "placeholder": "Renseignez votre sexe",
+            "options": {
+              "Male": "Homme",
+              "Female": "Femme"
+            }
+          }
+        },
+        "item": {
+          "name": {
+            "label": "Nom",
+            "placeholder": "Renseignez la dénomination de l'élément"
+          },
+          "description": {
+            "label": "Description",
+            "placeholder": "Renseignez la description de l'objet"
+          },
+          "rating": {
+            "label": "Note",
+            "placeholder": "Renseignez une évaluation de l'objet"
+          }
+        }
+    }
 }
