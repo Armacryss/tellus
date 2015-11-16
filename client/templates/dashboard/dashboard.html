@@ -4,6 +4,10 @@
 
     <h1>{{_ 'dashboard'}}</h1>
 
+    {{#if currentUser.isAdmin}}
+      {{> tabular table=TabularTables.Users class="striped responsive-table"}}
+    {{/if}}
+    
     <ul class="collection">
       {{#each items}}
         <li class="collection-item avatar">

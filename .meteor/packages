@@ -40,3 +40,5 @@ poetic:materialize-scss
 useraccounts:materialize
 gwendall:autoform-i18n
 gwendall:simple-schema-i18n
+aldeed:tabular
+rzymek:moment-locale-fr

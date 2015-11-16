@@ -4,6 +4,7 @@ DashboardController = AppController.extend({
   },
   data: {
     items: Items.find({}),
+    currentUser: Meteor.user,
     bread: [
       {path: 'home', name: 'home'},
       {path: 'dashboard', name: 'dashboard'}

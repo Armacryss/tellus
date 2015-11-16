@@ -1,5 +1,21 @@
 Schema = {};
 
+Users = Meteor.users;
+
+Users.helpers({  
+  getUsername: function() {
+      var user = Meteor.users.findOne({ "_id" : this._id });
+      return user.username !== undefined ? user.username : user.getMainEmail();
+  },
+  getMainEmail: function() {
+      var user = Meteor.users.findOne({ "_id" : this._id });
+      return user.emails !== undefined ? user.emails[0].address : '';
+  },
+  isAdmin : function() {
+     return Roles.userIsInRole(this._id, [Tellus.Enum.Roles.ADMIN]);
+  }
+});
+
 Schema.UserProfile = new SimpleSchema({
     firstName: {
         type: String,
@@ -22,6 +38,7 @@ Schema.UserProfile = new SimpleSchema({
         }
     }
 });
+
 
 Schema.User = new SimpleSchema({
     username: {
@@ -86,5 +103,31 @@ Schema.User = new SimpleSchema({
 Meteor.startup(function() {
     Schema.UserProfile.i18n("schemas.userprofile");
     Meteor.users.attachSchema(Schema.User);
+});
+
+TabularTables.Users = new Tabular.Table({
+    name: "Users",
+    collection: Meteor.users,
+    pub: "allUsers",
+    allow: function (userId) {
+        var user = Meteor.users.findOne({ _id: userId });
+        
+        return user && user.isAdmin();
+    },
+    columns: [
+        {data: "getUsername", title: "Username"},
+        {data: "roles", title: "Roles"},
+        {
+            data: "createdAt",
+            title: "Created Date",
+            render: function (val, type, doc) {
+                if (val instanceof Date) {
+                    return moment(val).calendar();
+                } else {
+                    return "Never";
+                }
+            }
+        }
+    ]
 });
 

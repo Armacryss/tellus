@@ -15,6 +15,5 @@ ProfileController = AppController.extend({
 ProfileController.events({
   'click [data-action=save]': function (event, template) {
     event.preventDefault();
-    console.log(this);
   }
 });
