@@ -12,19 +12,23 @@
     "schemas": {
         "userprofile": {
           "firstName": {
-            "label": "First name",
-            "placeholder": "Your first name"
+            "label": "First name"
           },
           "lastName": {
-            "label": "Last name",
-            "placeholder": "Your last name"
+            "label": "Last name"
           },
           "gender": {
             "label": "Gender",
-            "placeholder": "Select a gender",
             "options": {
               "Male": "Male",
               "Female": "Female"
+            }
+          },
+          "localization": {
+            "label": "Language",
+            "options": {
+              "langfrench": "French",
+              "langenglish": "English"
             }
           }
         },

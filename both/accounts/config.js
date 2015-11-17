@@ -6,13 +6,31 @@ AccountsTemplates.addFields([
     {
         _id: 'firstName',
         type: 'text',
-        displayName: "First name",
+        displayName: "firstname",
+        placeholder: "firstname",
         required: true,
     },
     {
         _id: 'lastName',
         type: 'text',
-        displayName: "Last name",
+        displayName: "lastname",
+        placeholder: "lastname",
+        required: true,
+    },
+    {
+        _id: 'localization',
+        type: "select",
+        displayName: "localization",
+        select: [
+            {
+                text: "English",
+                value: "en",
+            },
+            {
+                text: "Français",
+                value: "fr",
+            },
+        ],
         required: true,
     }
 ]);

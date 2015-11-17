@@ -4,15 +4,15 @@ Users = Meteor.users;
 
 Users.helpers({  
   getUsername: function() {
-      var user = Meteor.users.findOne({ "_id" : this._id });
-      return user.username !== undefined ? user.username : user.getMainEmail();
+        var user = Meteor.users.findOne({ "_id" : this._id });
+        return user.username !== undefined ? user.username : user.getMainEmail();
   },
   getMainEmail: function() {
-      var user = Meteor.users.findOne({ "_id" : this._id });
-      return user.emails !== undefined ? user.emails[0].address : '';
+        var user = Meteor.users.findOne({ "_id" : this._id });
+        return user.emails !== undefined ? user.emails[0].address : '';
   },
   isAdmin : function() {
-     return Roles.userIsInRole(this._id, [Tellus.Enum.Roles.ADMIN]);
+        return Roles.userIsInRole(this._id, [Tellus.Enum.Roles.ADMIN]);
   }
 });
 
@@ -27,14 +27,23 @@ Schema.UserProfile = new SimpleSchema({
     },
     gender: {
         type: String,
-        allowedValues: ['Male', 'Female'],
-        optional: true
-    },
-    bio: {
-        type: String,
+        allowedValues: ['m', 'f'],
         optional: true,
         autoform: {
-          type: 'textarea'
+          options: [
+            {label: "Male", value: "m"},
+            {label: "Female", value: "f"}
+          ]
+        }
+    },
+    localization: {
+        type: String,
+        allowedValues: ['en', 'fr'],
+        autoform: {
+          options: [
+            {label: "English", value: "en"},
+            {label: "Français", value: "fr"}
+          ]
         }
     }
 });
@@ -102,6 +111,7 @@ Schema.User = new SimpleSchema({
 
 Meteor.startup(function() {
     Schema.UserProfile.i18n("schemas.userprofile");
+    Schema.User.i18n("schemas.userprofile");
     Meteor.users.attachSchema(Schema.User);
 });
 
@@ -111,7 +121,6 @@ TabularTables.Users = new Tabular.Table({
     pub: "allUsers",
     allow: function (userId) {
         var user = Meteor.users.findOne({ _id: userId });
-        
         return user && user.isAdmin();
     },
     columns: [
