@@ -8,17 +8,19 @@ Meteor.startup(function() {
   
   $('body').on('click', '[data-action=switch_fr]', function(event) {
     event.preventDefault();
-    TAPi18n.setLanguage('fr');
-    T9n.setLanguage('fr');
-    moment.locale('fr');
-    moment().locale('fr');
+    Blaze._globalHelpers['switch_language']('fr');
   });
     
   $('body').on('click', '[data-action=switch_en]', function(event) {
     event.preventDefault();
-    TAPi18n.setLanguage('en');
-    T9n.setLanguage('en');
-    moment.locale('en');
-    moment().locale('en');
+    Blaze._globalHelpers['switch_language']('en');
+  });
+  
+  Tracker.autorun(function(){
+    if(Meteor.userId()){
+      var user = Meteor.users.findOne({ _id: Meteor.userId()});
+      Blaze._globalHelpers['switch_language'](user.getLanguage());
+    }
   });
 });
+

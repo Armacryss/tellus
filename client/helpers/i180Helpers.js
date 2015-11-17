@@ -6,3 +6,9 @@ Template.registerHelper('current_language_tag', function(lang) {
         return '<i class="mdi-toggle-star"></i> ';
     }
 });
+Template.registerHelper('switch_language', function(lang) {
+    TAPi18n.setLanguage(lang);
+    T9n.setLanguage(lang);
+    moment.locale(lang);
+    moment().locale(lang);
+});

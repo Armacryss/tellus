@@ -19,6 +19,7 @@
           },
           "gender": {
             "label": "Gender",
+            "placeholder": "Select a gender",
             "options": {
               "Male": "Male",
               "Female": "Female"
@@ -26,6 +27,7 @@
           },
           "localization": {
             "label": "Language",
+            "placeholder": "Your language",
             "options": {
               "langfrench": "French",
               "langenglish": "English"
@@ -34,16 +36,13 @@
         },
         "item": {
           "name": {
-            "label": "Name",
-            "placeholder": "Enter item name"
+            "label": "Name"
           },
           "description": {
-            "label": "Description",
-            "placeholder": "Enter item description"
+            "label": "Description"
           },
           "rating": {
-            "label": "Rating",
-            "placeholder": "Select item rating"
+            "label": "Rating"
           }
         }
     }

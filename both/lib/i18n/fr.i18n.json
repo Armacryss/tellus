@@ -19,6 +19,7 @@
           },
           "gender": {
             "label": "Genre",
+            "placeholder": "Votre genre",
             "options": {
               "Male": "Homme",
               "Female": "Femme"
@@ -26,6 +27,7 @@
           },
           "localization": {
             "label": "Langue",
+            "placeholder": "Votre langue",
             "options": {
               "langfrench": "Français",
               "langenglish": "Anglais"
@@ -34,16 +36,13 @@
         },
         "item": {
           "name": {
-            "label": "Nom",
-            "placeholder": "Renseignez la dénomination de l'élément"
+            "label": "Nom"
           },
           "description": {
-            "label": "Description",
-            "placeholder": "Renseignez la description de l'objet"
+            "label": "Description"
           },
           "rating": {
-            "label": "Note",
-            "placeholder": "Renseignez une évaluation de l'objet"
+            "label": "Note"
           }
         }
     }
