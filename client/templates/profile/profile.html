@@ -1,6 +1,9 @@
 <template name="userprofile">
     {{#autoForm collection="Meteor.users" schema=userSchema doc=user id="user-profile-form" type="update"}}
-        {{> afObjectField name='profile'}}
-        <button type="submit" class="btn btn-primary">{{_ 'send'}}</button>
+        <h1>{{_ 'profile'}}</h1>
+        <div class="card-panel">
+            {{> afQuickFields name="profile"}}
+            <button type="submit" class="btn btn-primary">{{_ 'send'}}</button>
+        </div>
     {{/autoForm}}
 </template>

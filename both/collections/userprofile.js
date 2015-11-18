@@ -3,30 +3,55 @@ Schema = {};
 Schema.UserProfile = new SimpleSchema({
     firstName: {
         type: String,
+        label: function() {
+            return TAPi18n.__("schemas.userprofile.firstName.label");
+        },
         max: 200
     },
     lastName: {
         type: String,
+        label: function() {
+            return TAPi18n.__("schemas.userprofile.lastName.label");
+        },
         max: 200
     },
     gender: {
         type: String,
         allowedValues: ['m', 'f'],
         optional: true,
+        label: function() {
+            return TAPi18n.__("schemas.userprofile.gender.label");
+        },
         autoform: {
           options: [
-            {label: "Male", value: "m"},
-            {label: "Female", value: "f"}
+            {
+                label: function() {
+                    return TAPi18n.__("schemas.userprofile.gender.options.Male");
+                },
+                value: "m"},
+            {
+                label: function() {
+                    return TAPi18n.__("schemas.userprofile.gender.options.Female");
+                }, value: "f"}
           ]
         }
     },
     localization: {
         type: String,
         allowedValues: ['en', 'fr'],
+        label: function() {
+            return TAPi18n.__("schemas.userprofile.localization.label");
+        },
         autoform: {
           options: [
-            {label: "English", value: "en"},
-            {label: "Français", value: "fr"}
+            {
+                label: function() {
+                    return TAPi18n.__("schemas.userprofile.localization.options.langenglish");
+                }, value: "en"},
+            {
+                label: function() {
+                    return TAPi18n.__("schemas.userprofile.localization.options.langfrench");
+                },value: "fr"}
           ]
         }
     }

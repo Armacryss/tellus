@@ -9,6 +9,13 @@
     "profile": "Profil",
     "newitem": "Nouvel élément",
     "send": "Envoyer",
+    "message": {
+      "profile" : {
+        "update" : {
+          "success" : "Profil mis à jour avec succès."
+        }
+      }
+    },
     "schemas": {
         "userprofile": {
           "firstName": {

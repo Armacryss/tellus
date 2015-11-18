@@ -34,7 +34,6 @@ ejson
 spacebars
 check
 useraccounts:iron-routing
-tap:i18n
 zimme:active-route
 poetic:materialize-scss
 useraccounts:materialize
@@ -42,3 +41,4 @@ gwendall:autoform-i18n
 gwendall:simple-schema-i18n
 aldeed:tabular
 rzymek:moment-locale-fr
+tap:i18n
