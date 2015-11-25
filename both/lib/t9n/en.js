@@ -7,7 +7,8 @@
     lastname: "Last name",
     localization: "Language",
     langenglish: "English",
-    langfrench: "French"
+    langfrench: "French",
+    username: "Username"
   };
 
   T9n.map("en", en);

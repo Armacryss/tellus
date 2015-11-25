@@ -9,6 +9,8 @@
     "profile": "Profil",
     "newitem": "Nouvel élément",
     "send": "Envoyer",
+    "sendok": "Message envoyé avec succès",
+    "sendnok": "Echec de l'envoi du message",
     "notadmin": "Vous devez être un Admin pour accéder à cette page.",
     "items": {
       "label" : "Eléments",

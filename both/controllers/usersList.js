@@ -9,7 +9,8 @@ UsersListController = AppController.extend({
 });
 
 UsersListController.events({
-  'click [data-action=doSomething]': function (event, template) {
+  'click [data-action=send_email]': function (event, template) {
     event.preventDefault();
+    console.log('Here here !');
   }
 });

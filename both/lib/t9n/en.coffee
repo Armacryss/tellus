@@ -4,5 +4,6 @@ en =
     localization: "Language"
     langenglish: "English"
     langfrench: "French"
+    username: "Username"
 
 T9n.map "en", en

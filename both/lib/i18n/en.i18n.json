@@ -9,6 +9,8 @@
     "profile": "Profile",
     "newitem": "New Item",
     "send": "Send",
+    "sendok": "Message sent successfully",
+    "sendnok": "Failed to send message",
     "notadmin": "You must be an Admin to access this link.",
     "items": {
       "label" : "Items",

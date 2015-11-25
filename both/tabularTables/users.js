@@ -7,7 +7,7 @@ TabularTables.Users = new Tabular.Table({
         return user && user.isAdmin();
     },
     columns: [
-        {data: "getUsername", title: "Username"},
+        {data: "username", title: "Username"},
         {data: "roles", title: "Roles"},
         {
             data: "createdAt",
@@ -19,6 +19,9 @@ TabularTables.Users = new Tabular.Table({
                     return "Never";
                 }
             }
+        },
+        {
+          tmpl: Meteor.isClient && Template.list_send_email
         }
     ]
 });

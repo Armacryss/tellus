@@ -1,6 +1,5 @@
 Accounts.onCreateUser(function (options, user) {
     user.roles = [Tellus.Enum.Roles.REGISTERED_USER];
-    
     Roles.addUsersToRoles(user._id, user.roles);
 
     if (options !== undefined && options.profile) {
@@ -12,4 +11,10 @@ Accounts.onCreateUser(function (options, user) {
     }
     
     return user;
+});
+
+Meteor.methods({
+    "userExists": function(username){
+        return !!Meteor.users.findOne({username: username});
+    },
 });
