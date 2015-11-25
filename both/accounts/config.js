@@ -23,11 +23,11 @@ AccountsTemplates.addFields([
         displayName: "localization",
         select: [
             {
-                text: "English",
+                text: TAPi18n.__("schemas.userprofile.localization.options.langenglish"),
                 value: "en",
             },
             {
-                text: "Français",
+                text: TAPi18n.__("schemas.userprofile.localization.options.langfrench"),
                 value: "fr",
             },
         ],

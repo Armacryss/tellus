@@ -1,5 +1,5 @@
 HomeController = AppController.extend({
   data: {
-    bread: [{path: 'home',name: 'Home'}]
+    bread: [{path: 'home',name: 'home'}]
   }
 });

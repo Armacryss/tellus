@@ -1,0 +1,11 @@
+<template name="default_card">
+    <div class="card blue darken-2 z-depth-3">
+        <div class="card-content white-text">
+            <span class="card-title">{{_ label}}</span>
+            <p>{{_ message nb_card_item=cardItemCount count=cardItemCount}}</p>
+        </div>
+        <div class="card-action right-align truncate">
+            <a data-action="{{ action_name }}" href="{{#if path.is_route}}{{pathFor path.route_name}}{{else}}#{{/if}}" title="{{_ see_more}}"><i class="mdi-action-search"></i></a>
+        </div>
+    </div>
+</template>

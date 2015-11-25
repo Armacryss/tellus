@@ -11,7 +11,11 @@
   
           <ul class="right hide-on-med-and-down">
             <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}" title="{{_ 'home'}}"><i class="mdi-action-home"></i></a></li>
-            <li class="{{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}" title="{{_ 'dashboard'}}"><i class="mdi-action-dashboard"></i></a></li>
+            {{#if currentUser}}
+              {{#if currentUser.isAdmin}}
+                <li class="{{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}" title="{{_ 'dashboard'}}"><i class="mdi-action-dashboard"></i></a></li>
+              {{/if}}
+            {{/if}}
           </ul>
 
           <ul id="user-dropdown" class="dropdown-content">

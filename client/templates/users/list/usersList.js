@@ -1,0 +1,4 @@
+Template.usersList.rendered = function() {
+
+};
+

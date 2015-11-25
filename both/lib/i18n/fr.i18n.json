@@ -9,12 +9,30 @@
     "profile": "Profil",
     "newitem": "Nouvel élément",
     "send": "Envoyer",
+    "notadmin": "Vous devez être un Admin pour accéder à cette page.",
+    "items": {
+      "label" : "Eléments",
+      "message" : "__nb_card_item__ élément",
+      "message_plural" : "__nb_card_item__ éléments",
+      "list": "Liste d'éléments"
+    },
+    "users": {
+      "label" : "Utilisateurs",
+      "message" : "__nb_card_item__ utilisateur",
+      "message_plural" : "__nb_card_item__ utilisateurs",
+      "list": "Liste des utilisateurs"
+    },
     "message": {
       "profile" : {
         "update" : {
           "success" : "Profil mis à jour avec succès."
         }
       }
+    },
+    "see_users": "Voir les utilisateurs",
+    "see_items": "Voir les éléments",
+    "admin": {
+      "rights_required" : "Vous devez être administrateur pour visualiser le contenu de cette page."
     },
     "schemas": {
         "userprofile": {

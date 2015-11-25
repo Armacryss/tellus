@@ -6,7 +6,8 @@ Accounts.onCreateUser(function (options, user) {
     if (options !== undefined && options.profile) {
         user.profile =  {
             firstName: options.profile.firstName,
-            lastName: options.profile.lastName
+            lastName: options.profile.lastName,
+            localization: options.profile.localization,
         };
     }
     

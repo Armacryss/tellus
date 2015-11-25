@@ -9,6 +9,19 @@
     "profile": "Profile",
     "newitem": "New Item",
     "send": "Send",
+    "notadmin": "You must be an Admin to access this link.",
+    "items": {
+      "label" : "Items",
+      "message" : "__nb_items__ item",
+      "message_plural" : "__nb_items__ items",
+      "list": "Items list"
+    },
+    "users": {
+      "label" : "Users",
+      "message" : "__nb_user__ user",
+      "message_plural" : "__nb_user__ users",
+      "list": "Users list"
+    },
     "message": {
       "profile" : {
         "update" : {
@@ -16,6 +29,11 @@
         }
       }
     },
+    "admin": {
+      "rights_required" : "You must be an administrator to access this page."
+    },
+    "see_users": "See users",
+    "see_items": "See items",
     "schemas": {
         "userprofile": {
           "firstName": {
