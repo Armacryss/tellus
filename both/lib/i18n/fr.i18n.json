@@ -9,6 +9,11 @@
     "profile": "Profil",
     "newitem": "Nouvel élément",
     "send": "Envoyer",
+    "sendemail": {
+      "title": "Envoyer un courriel",
+      "confirm": "Voulez-vous vraiment envoyer un courriel à __username__"
+    },
+    "cancel": "Annuler",
     "sendok": "Message envoyé avec succès",
     "sendnok": "Echec de l'envoi du message",
     "notadmin": "Vous devez être un Admin pour accéder à cette page.",

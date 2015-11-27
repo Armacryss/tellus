@@ -3,8 +3,18 @@
 </template>
 
 
-<template name="list_send_email">
-  <button class="btn waves-effect waves-light" type="button" data-action="send_email">
+<template name="usersList_cell_actions">
+  <a class="waves-effect waves-light" data-action="edit_user" href="#">
+    <i class="material-icons">edit</i>
+  </a>
+  <a class="waves-effect waves-light modal-trigger" href="#" data-action="confirm_send_email">
     <i class="material-icons">send</i>
-  </button>
+  </a>
+</template>
+
+<template name="modal_send_mail_footer">
+  <div class="modal-footer">
+    <button id="closeButton" class="waves-effect waves-light btn-flat" style="margin: 5px;"><i class="material-icons left red-text">exit_to_app</i> {{_ 'cancel'}}</button>
+    <button id="submitButton" type="submit" class="waves-effect waves-light btn-flat" style="margin: 5px;"><i class="material-icons left green-text">send</i> {{_ 'send'}}</button>
+  </div>
 </template>

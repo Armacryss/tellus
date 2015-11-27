@@ -8,6 +8,8 @@ TabularTables.Users = new Tabular.Table({
     },
     columns: [
         {data: "username", title: "Username"},
+        {data: "profile.firstName", title: "First name"},
+        {data: "profile.lastName", title: "Last name"},
         {data: "roles", title: "Roles"},
         {
             data: "createdAt",
@@ -21,7 +23,7 @@ TabularTables.Users = new Tabular.Table({
             }
         },
         {
-          tmpl: Meteor.isClient && Template.list_send_email
+          tmpl: Meteor.isClient && Template.usersList_cell_actions
         }
     ]
 });

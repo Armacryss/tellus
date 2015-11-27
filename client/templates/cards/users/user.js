@@ -2,9 +2,6 @@ Template.card_user.onCreated(function() {
     return this.subscribe('allUsers');
 });
 Template.card_user.helpers({
-    waitOn: function() {
-        
-    },
     card_user_data: function() {
         return {
             label: 'users.label',

@@ -1,9 +1,7 @@
 DashboardController = AppController.extend({
   waitOn: function() {
-    return this.subscribe('items');
   },
   data: {
-    items: Items.find({}),
     bread: [
       {path: 'home', name: 'home'},
       {path: 'dashboard', name: 'dashboard'}

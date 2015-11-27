@@ -1,3 +1,7 @@
+Template.card_user.onCreated(function() {
+    return this.subscribe('items');
+});
+
 Template.card_items.helpers({
     card_item_data: function() {
         return {

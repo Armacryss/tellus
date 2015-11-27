@@ -12,6 +12,11 @@
     "sendok": "Message sent successfully",
     "sendnok": "Failed to send message",
     "notadmin": "You must be an Admin to access this link.",
+    "cancel": "Cancel",
+    "sendemail": {
+      "title": "Send email",
+      "confirm": "Do you really want to send an email to __username__"
+    },
     "items": {
       "label" : "Items",
       "message" : "__nb_items__ item",

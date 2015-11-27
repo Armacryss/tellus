@@ -4,10 +4,10 @@ Meteor.publishComposite("allUsers", function() {
         var user =  Meteor.users.findOne({ _id: this.userId });
         
         if(user && user.isAdmin()) {
-            return Meteor.users.find();
+            return Meteor.users.find({});
         }
         else {
-            return Meteor.users;
+            return Meteor.users.find({ _id: this.userId });
         }
     }
   }
